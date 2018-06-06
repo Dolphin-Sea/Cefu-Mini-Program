@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/selection/selection",
+    "pages/selection/merchant-login/login",
+    "pages/customer/homepage/homepage",
+    "pages/merchant/homepage/homepage",
+    "pages/merchant/member/member",
+    "pages/merchant/price/price",
+    "pages/merchant/storage/storage",
+    "pages/customer/price/price",
+    "pages/customer/introduce/introduce",
+    "pages/customer/chongzhi/chongzhi",
+    "pages/customer/user/user",
+    "pages/customer/search/search",
+    "pages/selection/customer-login/login",
+    "pages/customer/toutiao/toutiao",
+    "pages/customer/navigate/park/park",
+    "pages/customer/navigate/xiche/xiche",
+    "pages/customer/navigate/appointment/appointment",
+    "pages/customer/navigate/shangmen/shangmen",
+    "pages/customer/test/test",
+    "pages/customer/test1/test1",
+    "pages/customer/result/result",
+    "pages/customer/fankui/fankui",
+    "pages/customer/star/star",
+    "pages/customer/category/category",
+    "pages/customer/map/map",
+    "pages/customer/mobile/mobile",
+    "pages/customer/test2/test2",
+    "pages/customer/test3/test3"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "车福汽修微信小程序",
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#414450",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/customer/homepage/homepage",
+        "text": "首页",
+        "iconPath": "icons/homepage1.png",
+        "selectedIconPath": "icons/homepage2.png"
+      },
+      {
+        "pagePath": "pages/customer/price/price",
+        "text": "价格",
+        "iconPath": "icons/search1.png",
+        "selectedIconPath": "icons/search2.png"
+      },
+      {
+        "pagePath": "pages/customer/star/star",
+        "text": "功能",
+        "iconPath": "icons/middle1.png",
+        "selectedIconPath": "icons/middle2.png"
+      },
+      {
+        "pagePath": "pages/customer/toutiao/toutiao",
+        "text": "头条",
+        "iconPath": "icons/toutiao1.png",
+        "selectedIconPath": "icons/toutiao2.png"
+      },
+      {
+        "pagePath": "pages/customer/user/user",
+        "text": "我的",
+        "iconPath": "icons/user1.png",
+        "selectedIconPath": "icons/user2.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

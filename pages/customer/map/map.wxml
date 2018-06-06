@@ -1,0 +1,12 @@
+<map id="map" 
+longitude="{{longitude1}}" latitude="{{latitude1}}" scale="{{scale}}" 
+controls="{{controls}}" bindcontroltap="controltap" 
+markers="{{markers}}" bindmarkertap="markertap" 
+polyline="{{polyline}}" bindregionchange="regionchange" 
+show-location style="width: 100%; height: 400px;"></map>
+<button bindtap='test1'>{{huoqu}}</button>
+<button bindtap='test2'>{{xuanze}}</button>
+<view>{{address}}</view>
+<view>{{name}}</view>
+<view>{{longitude}}</view>
+<view>{{latitude}}</view>

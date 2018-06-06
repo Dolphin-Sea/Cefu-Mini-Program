@@ -1,0 +1,7 @@
+<template name ='test'>
+<view>测试</view>
+<view>{{content}}</view>
+<view>{{name}}</view>
+<view>{{myObj.key1}}</view>
+<view>{{key2}}</view>
+</template>

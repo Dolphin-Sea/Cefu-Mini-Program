@@ -1,0 +1,94 @@
+.theme-top {
+  height: 200rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+
+.title {
+  width: 520rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: font;
+  font-size: 60rpx;
+}
+
+.title-under {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.theme-top-right image {
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+
+.theme-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #999;
+}
+
+.theme-middle {
+  margin-top: 40rpx;
+}
+
+.item {
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.item image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.item::after {
+  /*此部分为item后面的图形*/
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #ccc;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  right: 0;
+  margin-right: 28rpx;
+  margin-top: 30rpx;
+}
+
+.activity {
+  /*这一部分的整体布局，flex，方向行，若每个方块过大可以换行显示，整体居中对齐*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.activity-item {
+  /*每个方块的高、宽、间距margin*/
+  height: 200rpx;
+  width: 30%;
+  background-color: goldenrod;
+  margin: 2px;
+  position: relative;
+}
+
+.activity-item image {
+  height: 100%;
+  width: 100%;
+}
+
+.theme-bottom {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: royalblue;
+}

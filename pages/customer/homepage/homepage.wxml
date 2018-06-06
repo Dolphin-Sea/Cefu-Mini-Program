@@ -1,0 +1,162 @@
+<view class="container">
+  <view class="search">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{homepage1.array}}" class="search-address">
+      <view class="picker">{{homepage1.array[index]}}
+        <text style="color:white;">∨</text>
+      </view>
+    </picker>
+    <form bindsubmit="formSubmit" class="search-form" bindtap="gosearch">
+      <icon type="search" size="15"></icon>
+      <input type="text" placeholder="输入关键字" class="search-input" />
+    </form>
+  </view>
+
+  <view class="selection">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" catchtap='introduce'>
+      <!-- <block wx:for="{{imgUrls}}" wx:key='unique'>-->
+      <block wx:for="{{homepage1.swipers}}" wx:key='unique'>
+       <!-- <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />因为组件自己的style问题，改不了rpx，参考网上方法，将这里的图片设置成背景大小自动适应-->
+           <swiper-item  style="background:url({{item}});background-repeat: no-repeat;background-size:100% 420rpx; ">
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="selection">
+    <view class="header">
+      <text>{{homepage1.tuijian}}</text>
+      <view class="text-all" catchtap='goCategory'>
+        <text>{{homepage1.jingpin}}</text>
+      </view>
+    </view>
+
+    <view class="content"><!--刚学的时候做的，现在这里把image和text做成数组，可以循环，暂时先这样吧，时间紧-->
+      <view class="content-item" bindtap='dateCar'>
+        <image src='/icons/01.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.yuyue}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='test'>
+        <image src='/icons/02.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.kaifa}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='practice'>
+        <image src='/icons/03.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.shengchan}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='fixCar'>
+        <image src='/icons/04.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.saoma}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='oilCar'>
+        <image src='/icons/05.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.jiayou}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='washCar'>
+        <image src='/icons/06.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.xiche}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='changeIt'>
+        <!--是否需要上门更换，填写地址-->
+        <image src='/icons/07.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.dianping}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='emergency'>
+        <image src='/icons/01.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.jiuyuan}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='customerLogin'>
+        <image src='/icons/08.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.sanfang}}</text>
+        </view>
+      </view>
+      <view class="content-item" bindtap='parkCar'>
+        <image src='/icons/02.png' />
+        <view class='content-item-text'>
+          <text>{{homepage1.tingche}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="notice" style="height:{{noticeHeight}}rpx">
+    <image src="/icons/icon_notice.png"></image>
+    <swiper class="notice-slider" autoplay="{{autoplay}}" interval="{{interval1}}" duration="{{duration1}}" circular="true">
+      <swiper-item wx:for="{{noticeUrl}}" wx:key="unique">
+        <text>{{homepage1.gonggao}}</text>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="selection">
+    <view class="activity">
+      <view class="activity-item">
+        <image src="{{imgURLS.url_content1}}" bindtap='titleText' />
+        <view class="activity-item-text">
+          <text>{{homepage1.content1}}</text>
+        </view>
+      </view>
+      <view class="activity-item">
+        <image src="{{imgURLS.url_content2}}" bindtap='titleText' />
+        <view class="activity-item-text">
+          <text>{{homepage1.content2}}</text>
+        </view>
+      </view>
+      <view class="activity-item">
+        <image src='{{imgURLS.url_content3}}' bindtap='titleText' />
+        <view class="activity-item-text">
+          <text>{{homepage1.content3}}</text>
+        </view>
+      </view>
+      <view class="activity-item">
+        <image src="{{imgURLS.url_content4}}" bindtap='titleText' />
+        <view class="activity-item-text">
+          <text>{{homepage1.content4}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+<!--
+ 循环的时候这句话不行{{imgURLS.url_content[index+1]}}，所以我在想，如果我上传服务器的时候是一个content数组会不会就可以了？在一个就是每个图片的bindtap问题，写一个bindtap的数组？
+-->
+
+<!--bindtap数组可以解决-->
+  <view class="selection">
+    <view class="header">
+      <text>{{homepage1.knowledge}}</text>
+      <text class="text-all">{{homepage1.gengduo}}</text>
+    </view>
+    <view class='list-item' catchtap='toutiao' wx:for='{{testarrays}}' wx:for-index='myselfIndex' wx:key='unique'>
+      <view class='list-item-images'>
+        <image src='{{homepage1.images[myselfIndex]}}' class='list-item-images-img' />
+        <image src='{{homepage1.avators}}' class='avator' />
+      </view>
+      <view class='list-item-text'>
+        <view class='list-item-text-title'>
+          <text>{{homepage1.titles[myselfIndex]}}</text>
+        </view>
+        <view class='list-item-text-content'>
+          <text>{{homepage1.messages[myselfIndex]}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

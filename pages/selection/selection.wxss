@@ -1,0 +1,14 @@
+page {
+  background-color: #ffffff;
+}
+
+.selection {
+  margin-top: 70rpx;
+  background-color: #ffffff;
+  margin-left: 15rpx;
+}
+
+image {
+  width: 720rpx;
+  height: 360rpx;
+}

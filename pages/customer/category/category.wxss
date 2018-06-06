@@ -1,0 +1,52 @@
+.container {
+  font-family: "微软雅黑";
+  background-color: #f0f0f0;
+}
+
+.line {
+  /*各模块距上方的距离*/
+  height: 10px;
+}
+
+.item {
+  /*每个模块的边界*/
+  border: 1px solid #ccc;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.title {
+  font-family: '楷体';
+}
+
+.title-line {
+  height: 1px;
+  background-color: #ccc;
+  opacity: 0.2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-row {
+  /*此处为一排的布局方式*/
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.nav {
+  /*排中每个的样式*/
+  margin: 0 auto;
+  width: 70px;
+}
+
+.nav image{
+  width:38px;
+  height:38px;
+}

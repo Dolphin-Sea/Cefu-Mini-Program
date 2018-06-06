@@ -1,0 +1,19 @@
+<!--pages/customer/test1/test1.wxml-->
+<text>{{test}}\n</text>
+<text>{{movie.data}}</text>
+
+
+<view class="container">
+  <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="10" bindscrolltolower="scrollLoading">
+    <view class="test-list">
+      <view class="test-item" wx:for="{{testdata}}" wx:key="{{item.id}}">{{item.name}}</view>
+    </view>
+    <icon class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop" type="download" size="36" color="#3399FF"></icon>
+  </scroll-view>
+</view>
+
+
+<button type="default" bindtap='openBtnClick'>{{connect}}</button>
+<button type="default" bindtap='sendBtnClick'>{{send}}</button>
+<button type="default" bindtap='closeBtnClick'>{{close}}</button>
+<view wx:for="{{messages}}">{{item}}</view><!--循环message数组，显示item-->

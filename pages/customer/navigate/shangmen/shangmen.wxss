@@ -1,0 +1,31 @@
+/* pages/customer/navigate/shangmen/shangmen.wxss */
+
+.info {
+  margin: 40rpx;
+}
+
+.info picker {
+  border: 2rpx silver solid;
+  font-size: 30rpx;
+  padding: 10rpx 20rpx;
+  margin-top: 10rpx;
+}
+
+.address {
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.data-input {
+  border: 1px solid #999;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 60rpx;
+}
+
+.detail-address{
+  margin-top: 60rpx;
+    margin-left: 5%;
+  margin-right: 5%;
+  border-bottom: 1px solid black;
+}

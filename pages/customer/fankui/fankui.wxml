@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='title'>
+    <text>{{commonData.fankui.fankui_question}}</text>
+  </view>
+  <view class="warp">
+    <view class="item">{{commonData.fankui.fankui_location}}</view>
+    <view class="item">{{commonData.fankui.fankui_close}}</view>
+    <view class="item">{{commonData.fankui.fankui_wrong}}</view>
+    <view class="item">{{commonData.fankui.fankui_unlaw}}</view>
+  </view>
+</view>

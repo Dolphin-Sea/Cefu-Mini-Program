@@ -1,0 +1,39 @@
+/* pages/customer/result/result.wxss */
+.nothing{
+  height: 50px;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 115px;
+  }
+
+.boldfont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.smallfont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 10px;
+  margin-bottom: 120px;
+}
+
+.c4{
+  color: #808080;
+}
+.width{
+  width: 300rpx;
+}

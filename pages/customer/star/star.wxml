@@ -1,0 +1,19 @@
+<import src='../../../template/common.wxml'/><!--路由关系。最近上一层，pages层，跳出pages层。include用于如果模板里面还有模板，不拷贝template-->
+<button bindtap='click'>{{commonData.star.star_upload}}</button>
+<view class="uploader-container" wx:if="{{imgUrl}}">
+  <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+</view>
+
+<!--
+<template name ='test'>
+<view>测试</view>
+<view>{{content}}</view>
+<view>{{name}}</view>
+<view>{{myObj.key1}}</view>
+<view>{{key2}}</view>
+</template>
+-->
+<view>showContent</view>
+<!--注意"和'包含使用-->
+<template is='test' data="{{content:'my_test' ,name,myObj,...myObj2}}" />
+<button bindtap='exit'>{{commonData.user.user_tuichu}}</button>

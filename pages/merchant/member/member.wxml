@@ -1,0 +1,3 @@
+<view wx:for='{{member}}' wx:key='unique'>
+<text>{{chengyuan.data.member[index].name}}\n{{chengyuan.data.member[index].sex}}\n{{chengyuan.data.member[index].age}}\n{{chengyuan.data.member[index].job}}\n{{chengyuan.data.member[index].position}}\n</text>
+</view>

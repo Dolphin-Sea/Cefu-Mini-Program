@@ -1,0 +1,155 @@
+/**index.wxss**/
+page {
+  background-color: #fff;
+}
+
+.show-image {
+  height: 360rpx;
+  width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 10rpx;
+}
+
+/*公告*/
+.notice-info {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.notice-title-wrap {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.notice-title-wrap image {
+  width: 30rpx;
+  height: 27rpx;
+  padding-top: 4rpx;
+  margin-right: 10rpx;
+}
+
+.notice-content {
+  margin: 0 30rpx;
+  text-indent: 2em;
+  line-height: 45rpx;
+  padding: 14rpx 14rpx 30rpx;
+}
+
+.pic-title-btn-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.pic-title-btn1 {
+  width: 360rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid #d2d2d2;
+  border-right: 1px solid  #d2d2d2;
+}
+
+.pic-title-btn2 {
+  width: 360rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid  #d2d2d2;
+}
+
+.pic-title-btn3 {
+  width: 360rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid  #d2d2d2;
+}
+
+.pic-title-btn4 {
+  width: 360rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pic-title-btn1  image {
+  margin: 85rpx 0 30rpx;
+  width: 94rpx;
+  height: 94rpx;
+}
+
+.pic-title-btn2  image {
+  margin: 85rpx 0 30rpx;
+  width: 94rpx;
+  height: 94rpx;
+}
+
+.pic-title-btn3  image {
+  margin: 85rpx 0 30rpx;
+  width: 94rpx;
+  height: 94rpx;
+}
+
+.pic-title-btn4  image {
+  margin: 85rpx 0 30rpx;
+  width: 94rpx;
+  height: 94rpx;
+}
+
+/*字体大小与颜色样式*/
+.c1 {
+  color: #f2f2f2;
+}
+
+.c2 {
+  color: #d2d2d2;
+}
+
+.c3 {
+  color: #b2b2b2;
+}
+
+.c4 {
+  color: #808080;
+}
+
+.c5 {
+  color: #333;
+}
+
+.c6 {
+  color: #666;
+}
+
+.f1 {
+  font-size: 36rpx;
+}
+
+.f2 {
+  font-size: 30rpx;
+}
+
+.f3 {
+  font-size: 28rpx;
+}
+
+.f4 {
+  font-size: 26rpx;
+}
+
+.f5 {
+  font-size: 24rpx;
+}
+
+.f6 {
+  font-size: 22rpx;
+}

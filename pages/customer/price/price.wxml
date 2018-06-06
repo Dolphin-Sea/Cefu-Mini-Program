@@ -1,0 +1,101 @@
+<view class="container">
+
+  <view class="nav-tab-wrp">
+    <text class="nav-tab-item active">{{customerPrice.baoyang}}</text>
+    <text class="nav-tab-item">{{customerPrice.yanghu}}</text>
+    <text class="nav-tab-item">{{customerPrice.weixiu}}</text>
+  </view>
+
+
+  <view class="cart-tab-wrp">
+    <view class="cart-item-total cart-tab-item">
+      <view class="cart-item-icon-wrp">
+        <!--图片可以不用上级路径，直接用image去找-->
+        <image class="cart-item-icon" src="/images/caidan/1.png" />
+        <text hidden="{{total.count}}" class="cart-item-total-num bc_red">{{total.count}}</text>
+      </view>
+      <text class="cart-item-total-price">￥{{total.money}}</text>
+    </view>
+
+    <view class="cart-tab-item">
+      <view catchtap='pay' class="cart-tab-item-btn" hover-class="navigator-hover">{{customerPrice.paynow}}</view>
+    </view>
+  </view>
+
+
+  <view class="menu-wrp">
+    <!--整体-->
+    <scroll-view scroll-y="true" class="left-side">
+      <!--整体左边-->
+      <!--菜单列表-->
+      <block wx:for="{{menus}}" wx:key="id" wx:for-item="menu">
+        <view class="menu-item" data-id="{{menu.id}}" data-tag="{{menu.tag}}" bindtap="selectMenu">
+          <!--每个小方框，这里view组件bindtap绑定的有一个自定义的id和tag，并且动态的为这两个赋值-->
+          <view class="menu-item-wrp">
+            <!--去掉此句话，会将icon和文字flex布局，默认成row，加上这个view，就将这个view整体布局，再单独对里面两个布局-->
+            <view class="{{selectedMenuId ==menu.id ? 'bc_red' : 'bc_gray'}} m-item-icon">
+              <image class="image" src="/images/caidan/2.png" />
+            </view>
+            <view>
+              <text class="m-item-title">{{menu.name}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class="menu-footer"></view>
+      <!--控制最下方，不然底部显示不出来-->
+    </scroll-view>
+
+    <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="right-side">
+      <!--整体右边-->
+      <!--子菜单列表-->
+      <block wx:for="{{menus}}" wx:key="id" wx:for-item="menu">
+        <view>
+          <view id="{{menu.tag}}" class="dish-category-title">{{menu.name}}</view>
+          <!--右边最上方的标题栏的字等于左边的， 左边id与右边tag关联，toView对应展示-->
+          <block wx:for="{{menu.dishs}}" wx:key="id" wx:for-item="dish">
+            <!--将左右关联起来后，开始对各个tag底下的数据进行循环输出-->
+            <view class="dish-item">
+              <view class="dish-item-wrp">
+                <view class="dish-item-pic">
+                  <!-- <image class="image" src="/images/price/{{dish.pic}}" />  真机测试时图片不显示-->
+                  <image class=" image " src="{{dish.pic}} " />
+                </view>
+
+                <view class="dish-item-info ">
+                  <view>
+                    <text class="dish-item-name ">{{dish.name}}</text>
+                  </view>
+                  <view>
+                    <text class="dish-item-sales ">{{customerPrice.xiaoliang}}{{dish.sales}}</text>
+                  </view>
+                  <view>
+                    <text class="dish-item-money ">{{sign}}{{dish.price}}</text>
+                  </view>
+                </view>
+
+                <view class="dish-item-count">
+                  <view class="dish-item-tab">
+                    <view hidden="{{dish.count == 0}}" class="dish-item-count-minus" data-id="{{dish.id}}" data-cid="{{menu.id}}" bindtap="minusCount">
+                      <image class="image" src="/images/caidan/minus.png" />
+                    </view>
+                  </view>
+
+                  <view class="dish-item-count-text dish-item-tab">
+                    <text hidden="{{dish.count == 0}}">{{dish.count}}</text>
+                  </view>
+
+                  <!--这个组件中带有一个自定义的id和cid,通常用在事件绑定机制上，在组件中可以定义数据，这些数据将会通过事件传递给 service，这里绑定的是动态值，与后文中es6的查找find相同，也就是说，当点击之后，方法会以极快的速度找到那个menu和dish的id,并赋值到视图中的自定义，继续后边的响应，这个机制没有看懂-->
+                  <view class="dish-item-count-plus" data-id="{{dish.id}}" data-cid="{{menu.id}}" bindtap="addCount">
+                    <image class="image" src="/images/caidan/add.png" />
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+      <view class="dish-footer"></view>
+    </scroll-view>
+  </view>
+</view>

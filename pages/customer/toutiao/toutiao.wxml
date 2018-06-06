@@ -1,0 +1,36 @@
+<block wx:for="{{array}}" wx:for-item='listitems' wx:for-index='listindexs' wx:key="unique">
+  <!--默认循环元素为item，下标为index-->
+  <view class="item">
+    <view>
+      <image src="{{detailToutiao.image[listindexs]}}" style="width:88px;height:66px;"></image>
+    </view>
+    <view class="desc">
+      <view class="title">{{detailToutiao.title[listindexs]}}</view>
+      <view class="count">
+        <view>{{detailToutiao.cartype}}</view>
+        <view class="liulan">{{detailToutiao.liulan[listindexs]}}{{detailToutiao.scan}}</view>
+        <view class="pinglun">{{detailToutiao.pinglun[listindexs]}}{{detailToutiao.review}}</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+  <view bindtap='countClick'>{{count}}{{detailToutiao.scan}}</view>
+
+
+
+<view class="item">
+  <view>
+    <image src="{{detailToutiao.image[0]}}" style="width:88px;height:66px;"></image>
+  </view>
+  <!--我想了下，现在实现了点击改数，如果不做循环，每个item可以独自写自己的浏览，若是在循环，不管服务器端还是事件响应还是浏览等内容，若想实现各自的显示，还必须要把相关内容做成数组的形式。近一步，如果后续完善此部分内容，比如点击后跳转到item的详情页面，需要学一下页面跳转所带的参数iD-->
+  <!--这里最初的时候写了两个bindtap,bindtap='countClick' bindtap='detail'，但发现跳转后浏览事件不响应，于是想如何在跳转的时候让其也响应，故把事件写到一个方法里-->
+  <view class="desc" bindtap='countClick'>
+    <view class="title">{{detailToutiao.title[0]}}</view>
+    <view class="count">
+      <view>{{detailToutiao.cartype}}</view>
+      <view class="liulan">{{count}}{{detailToutiao.scan}}</view>
+      <view class="pinglun">{{detailToutiao.pinglun[0]}}{{detailToutiao.review}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+}
+
+.btns text {
+  display: block;
+  width: 50%;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.active {
+  border-bottom: 2px solid #0396eb; 
+  background-color: royalblue;
+}

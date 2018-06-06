@@ -1,0 +1,34 @@
+<view>
+  <image class='show-image' src="/images/merchant/6.jpg" />
+</view>
+
+<!--公告-->
+<view class="notice-info">
+  <view class="notice-title-wrap">
+    <image src="/images/merchant/1.png"></image>
+    <text class="f1 c5">{{commonData.merchant.merchant_tip}}</text>
+  </view>
+  <view class="notice-content f2 c4">
+    {{commonData.merchant.merchant_content}}
+  </view>
+</view>
+
+
+<view class="pic-title-btn-wrap">
+  <view class="pic-title-btn1" bindtap="goMember">
+    <image src="/images/merchant/2.png"></image>
+    <text class="f1 c5">{{commonData.merchant.merchant_member}}</text>
+  </view>
+  <view class="pic-title-btn2" bindtap="goPrice">
+    <image src="/images/merchant/3.png"></image>
+    <text class="f1 c5">{{commonData.merchant.merchant_price}}</text>
+  </view>
+  <view class="pic-title-btn3" bindtap="goStorage">
+    <image src="/images/merchant/4.png"></image>
+    <text class="f1 c5">{{commonData.merchant.merchant_storage}}</text>
+  </view>
+  <view class="pic-title-btn4" bindtap="returnSelection">
+    <image src="/images/merchant/5.png"></image>
+    <text class="f1 c5">{{commonData.merchant.merchant_back}}</text>
+  </view>
+</view>

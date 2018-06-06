@@ -1,0 +1,16 @@
+<!--pages/customer/result/result.wxml-->
+<view class='nothing'>
+</view>
+
+<view class='center'>
+  <icon type='success' size='100' />
+</view>
+
+<text class='boldfont'>{{commonData.result.result_success}}</text>
+
+<view>
+  <view>
+    <text class='smallfont c4'>{{commonData.result.result_content}}</text>
+  </view>
+  <button class='width' bindtap='returnHomepage'>{{commonData.result.result_returnHomepage}}</button>
+</view>

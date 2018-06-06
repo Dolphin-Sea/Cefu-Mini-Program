@@ -1,0 +1,75 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-top {
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.font {
+  font-size: 32rpx;
+  font-weight: 600;
+  line-height: 64rpx;
+  color: #000;
+}
+
+.date-time {
+  /*width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;*/
+  margin: 30rpx 0rpx 60rpx;
+}
+
+.date {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+}
+
+.time {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.date image {
+  width: 55rpx;
+  height: 55rpx;
+}
+
+.time image {
+  width: 55rpx;
+  height: 55rpx;
+}
+
+.date-time picker {
+  width: 400rpx;
+  border: 1px solid #ddd;
+  border-radius: 8rpx;
+  padding: 0rpx 10rpx;
+  margin-left: 10rpx;
+}
+
+
+.form-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.now-on{
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+}

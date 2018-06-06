@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="signin">
+    <view bindtap="bindViewTap" class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>
+
+<loading hidden="{{isHideLoading}}" >{{commonData.user.user_loading}}</loading>
+<view class="warp">
+  <view class="item">{{commonData.user.user_dingdan}}</view>
+</view>
+<view class="warp">
+  <view class="item">{{commonData.user.user_shoucang}}</view>
+  <view class="item">{{commonData.user.user_youhui}}</view>
+  <view class="item">{{commonData.user.user_huiyuan}}</view>
+  <view class="item">{{commonData.user.user_peijian}}</view>
+</view>
+<view class="warp">
+  <view class="item">{{commonData.user.user_shezhi}}</view>
+</view>
+
+<button bindtap='exit'>{{commonData.user.user_tuichu}}</button>

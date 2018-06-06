@@ -1,0 +1,121 @@
+<view class="container">
+  <view class="line"></view>
+  <view class="item">
+    <view class="title">{{commonData.category.category_category1}}</view>
+    <view class="title-line"></view>
+
+    <!--尝试改写下bindtap数组,之前的数组问题解决了，时间太紧，能改多少改多少吧-->
+    <view class="nav-row">
+      <view class="nav"  wx:for='{{arrays1}}' wx:key='unique' bindtap='{{bindtaps[index]}}'>
+        <view>
+          <image src="{{icons1[index]}}" />
+        </view>
+        <view>{{index+1}}</view>
+      </view>
+    </view>
+
+
+    <!--这里用循环试一下,时间太紧，暂时不改别的了，下面的所有都可以改成循环代码-->
+    <view class="nav-row">
+      <view class="nav" wx:for='{{arrays}}' wx:key='unique'>
+        <view>
+          <image src='{{icons[index]}}' />
+        </view>
+        <view>{{index+5}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="line"></view>
+  <view class="item">
+    <view class="title">{{commonData.category.category_category2}}</view>
+    <view class="title-line"></view>
+    <view class="nav-row">
+      <view class="nav">
+        <view>
+          <image src="/icons/24.jpg" />
+        </view>
+        <view>1</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/25.jpg" />
+        </view>
+        <view>2</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/21.jpg" />
+        </view>
+        <view>3</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/22.jpg" />
+        </view>
+        <view>4</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="line"></view>
+  <view class="item">
+    <view class="title">{{commonData.category.category_category3}}</view>
+    <view class="title-line"></view>
+    <view class="nav-row">
+      <view class="nav">
+        <view>
+          <image src="/icons/23.jpg" />
+        </view>
+        <view>1</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/24.jpg" />
+        </view>
+        <view>2</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/25.jpg" />
+        </view>
+        <view>3</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/21.jpg" />
+        </view>
+        <view>4</view>
+      </view>
+    </view>
+    <view class="nav-row">
+      <view class="nav">
+        <view>
+          <image src="/icons/22.jpg" />
+        </view>
+        <view>5</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/23.jpg" />
+        </view>
+        <view>6</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/24.jpg" />
+        </view>
+        <view>7</view>
+      </view>
+      <view class="nav">
+        <view>
+          <image src="/icons/25.jpg" />
+        </view>
+        <view>8</view>
+      </view>
+    </view>
+  </view>
+  <view class="line"></view>
+
+</view>

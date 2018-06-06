@@ -1,0 +1,7 @@
+<!--<text>{{kucun.data.test1.name}}\n</text>
+<text>单价{{kucun.data.test1.price}}元/个\n</text>
+<text>库存{{kucun.data.test1.storage}}个</text>
+-->
+<view wx:for='{{storage}}' wx:key='unique'>
+<text>{{kucun.data.test5[index].name}}\n{{kucun.data.test5[index].price}}\n{{kucun.data.test5[index].storage}}</text>
+</view>

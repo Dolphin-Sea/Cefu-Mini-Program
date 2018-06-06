@@ -1,0 +1,66 @@
+<view class='container'>
+
+  <view class='theme-top'>
+    <view class='theme-top-left'>
+      <view class='title'>
+        <text>{{introduce.company}}</text>
+      </view>
+      <view class='title-under'>
+        <text>{{introduce.qixiu}}</text>
+      </view>
+    </view>
+
+    <view class='theme-top-right'>
+      <image src='https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1527825047644-HJgizSA1Q.jpg' />
+    </view>
+  </view>
+
+  <view class='theme-middle'>
+    <view class='theme-middle-items'>
+      <view class='item'>
+        <image src='/icons/01.png' />
+        <text bindtap='goLocation'>{{introduce.location}}</text>
+      </view>
+      <view class='item'>
+        <image src='/icons/01.png' />
+        <text>{{introduce.time}}</text>
+      </view>
+      <view class='item' bindtap='dial'>
+        <image src='/icons/01.png' />
+        <text>{{introduce.telephone}}</text>
+      </view>
+      <view class='item'>
+        <image src='/icons/01.png' />
+        <text>{{introduce.picture}}</text>
+      </view>
+    </view>
+
+
+
+    <!--用循环可以显示，但是preview总是默认第一张，{{preview[index+1]}}不可以，设定一个dataset应该可以-->
+    <view class="activity">
+      <view class='activity-item'>
+        <image src="https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1526741337519-SyGvFhpRG.jpg" bindtap="preview1"  />
+      </view>
+      <view class='activity-item'>
+        <image src='https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1526178685567-S18YmQBRf.jpg' bindtap="preview2" />
+      </view>
+      <view class='activity-item'>
+        <image src='https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1526958702130-BkUd5--JQ.jpg' bindtap="preview3" />
+      </view>
+      <view class='activity-item'>
+        <image src='https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1525934942942-H1vviwZRf.jpg' bindtap="preview4" />
+      </view>
+      <view class='activity-item'>
+        <image src='https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1525937036014-rJ4cXOWRG.jpg' bindtap="preview5"/>
+      </view>
+      <view class='activity-item'>
+        <image src='https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1525937052194-SyVi7_bCM.jpg' bindtap="preview6"/>
+      </view>
+    </view>
+
+    <view class='theme-bottom'>
+      <text bindtap='fankui'>{{introduce.fankui}}</text>
+    </view>
+  </view>
+</view>

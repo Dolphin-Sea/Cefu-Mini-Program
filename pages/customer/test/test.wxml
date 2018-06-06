@@ -1,0 +1,11 @@
+<!--pages/customer/test/test.wxml-->
+<text>{{test}}\n</text>
+<text>{{movie.data}}\n</text>
+<text>{{movie.data.test1}}\n</text>
+<text>{{movie.data.test2}}\n</text>
+<text>{{movie.data.test3}}\n</text>
+
+<button type="default" bindtap='openBtnClick'>{{connect}}</button>
+<button type="default" bindtap='sendBtnClick'>{{send}}</button>
+<button type="default" bindtap='closeBtnClick'>{{close}}</button>
+<view wx:for="{{messages}}">{{item}}</view><!--循环message数组，显示item-->

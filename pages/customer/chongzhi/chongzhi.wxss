@@ -1,0 +1,70 @@
+.container {
+  /*主页面背景颜色*/
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #f4f6f7;
+}
+
+.title-top {
+  /*充值金额模块，下面的价钱应该是绝对布局*/
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.money {
+  display: flex;
+  flex-flow: row;
+  line-height: 80rpx;
+  margin-left: 40rpx;
+  width: 710rpx;
+  height: 80rpx;
+  border-bottom: 2rpx solid #d7e0e4;
+  font-size: 38rpx;
+  font-weight: body;
+}
+
+.change-money {
+  height: 280rpx;
+}
+
+.chioce {
+  position: absolute;
+  width: 315rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border: 2rpx solid #34b5e3;
+  line-height: 80rpx;
+}
+
+.deposit{
+  margin-top: 200rpx;
+  width: 670rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+  background-color: #34b5e3;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.text1 {
+  position: absolute;
+  display: flex;
+  flex-flow: row;
+  font-size: 30rpx;
+  bottom: 110rpx;
+  color: #7c7d7f;
+  width: 100%;
+}
+
+.box {
+  margin-left: 50rpx;
+}
+
+.current-money{
+  margin-left: 40rpx;
+   font-size: 34rpx; 
+   line-height: 80rpx;
+   color: #34B5E3
+}

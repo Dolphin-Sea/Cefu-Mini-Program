@@ -1,0 +1,39 @@
+<view class="container">
+
+  <view class="image-top">
+    <image src='https://qcloudtest-1256509124.cos.ap-guangzhou.myqcloud.com/1525934942942-H1vviwZRf.jpg'></image>
+  </view>
+
+  <view>
+    <text class="font">{{time1}}</text>
+    <view class="date-time">
+      <view class='date'>
+        <image src="/images/date.png"></image>
+        <picker mode="date" placeholder="选择日期" value="{{date}}" start="1900-09-01" end="2100-09-01" bindchange="bindDateChange">
+          <view>
+            {{date}}
+          </view>
+        </picker>
+      </view>
+
+
+      <view class="time">
+        <image src="/images/time.png"></image>
+        <picker mode="time" placeholder="选择时间" value="{{time}}" start="01:00" end="24:00" bindchange="bindTimeChange">
+          <view>
+            {{time}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="form-bottom">
+    <text>{{nowOff}}</text>
+  </view>
+
+  <view class='now-on'>
+    <button bindtap='appointment'>{{nowOn}}</button>
+  </view>
+</view>

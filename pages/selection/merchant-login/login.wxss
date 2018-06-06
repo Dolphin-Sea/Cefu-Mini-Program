@@ -1,0 +1,138 @@
+page {
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 2px #ccc solid;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.title-top {
+  /*最上方登录和注册的布局，flex按行布局*/
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  font-family: '楷体';
+  font-weight: bold;
+}
+
+.title-top-left {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+}
+
+.title-top-right {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+}
+
+/*可以做一个btns样式，成flex布局，不加里面的view，通过对其text来进行控制，line-height调整上下文字间距*/
+
+/*.btns text {
+  display: block;
+  width: 50%;
+  line-height: 80px;
+  text-align: center;
+}*/
+
+.active {
+  border-bottom: 2px solid #0396eb;
+}
+
+.placeholder {
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+}
+
+input {
+  /*不加.input即表示所有input组件而不是样式名*/
+  padding: 30rpx 42rpx;
+  border-bottom: 1px solid #ccc;
+  font-family: "微软雅黑";
+}
+
+.btn {
+  width: 80%;
+  margin-top: 60rpx;
+  background: #0396eb;
+  color: white;
+  border-radius: 3px;
+}
+
+.content-middle {
+  /*margin表示外框,padding表示内框*/
+  margin-top: 50rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.password-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radio-sex {
+  display: flex;
+  flex-direction: row;
+  /*margin-top: 30rpx;*/
+  padding: 30rpx 42rpx;
+  border-bottom: 1px solid #ccc;
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+  color: gray;
+}
+
+.title-sex {
+  font-family: "微软雅黑";
+  padding-right: 30rpx;
+}
+
+.checkbox-job {
+  padding: 30rpx 42rpx;
+  border-bottom: 1px solid #ccc;
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+  color: gray;
+}
+
+.title-job {
+  font-family: "微软雅黑";
+  margin-bottom: 30rpx;
+}
+
+.phone-message {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

@@ -1,0 +1,98 @@
+<view class="container">
+  <view class="title-top">
+    <!--判断一下，login是否为login,是则为active;regis不是login,则为"",并在js中设置默认login为true，点击登录，data就为true，点击注册，data就为false，此时login为false就显示后面的active-->
+    <!--class里写了两个样式，第一个是直接样式，第二个是三元关系符判断样式，并通过下面wx:if来选择渲染,第一个直接样式已经删除，类似于f2 c4-->
+    <view class='title-top-left'>
+      <view class="{{login?'active':''}}" catchtap="onLogin">{{login1}}</view>
+    </view>
+    <view class='title-top-right'>
+      <view class="{{login?'':'active'}}" catchtap="onRegister">{{regis}}</view>
+    </view>
+  </view>
+
+  <view class='content-middle' wx:if="{{login}}">
+    <form bindsubmit="formSubmit1" bindreset="formReset1">
+      <input type="text" name="user" placeholder="用户名" placeholder-class="{{placeholder}}" />
+      <input type="number" password='true' name="password" placeholder="密码" placeholder-class="{{placeholder}}" />
+      <button class="btn" formType="submit">{{sub1}}</button>
+    </form>
+    <text style="font-size:30rpx;  padding-left:35rpx;">{{tip}}</text>
+
+    <button bindtap='tuichu'>{{tuichu}}</button>
+  </view>
+
+  <view class='content-middle' wx:else>
+    <form bindsubmit="formSubmit2" bindreset="formReset2">
+      <input type="number" name="user" placeholder="用户名/邮箱/手机号" maxlength="11" placeholder-class="{{placeholder}}" />
+      <view class='password-switch'>
+        <input password='{{password}}' name="password" placeholder="请输入密码" placeholder-class="{{placeholder}}" />
+        <switch bindchange='change'></switch>
+      </view>
+
+      <input password='{{true}}' name="passwordVerify" placeholder="确认密码" placeholder-class="{{placeholder}}" />
+
+      <input type="text" name="name" placeholder="联系人姓名" placeholder-class="{{placeholder}}" />
+
+      <view class='radio-sex'>
+        <view class='title-sex'>
+          <text>{{sex1}}</text>
+        </view>
+        <radio-group bindchange='change1'>
+          <radio value='man'>{{radio1}}</radio>
+          <radio value='woman'>{{radio2}}</radio>
+        </radio-group>
+      </view>
+
+      <view class='checkbox-job'>
+        <view class='title-job'>
+          <text>{{job1}}</text>
+        </view>
+        <!--如果不在每个checkbox之前加view，默认会按照行排列-->
+        <checkbox-group bindchange='change2'>
+          <view>
+            <checkbox value='fix'>{{check1}}</checkbox>
+          </view>
+          <view>
+            <checkbox value='clean'>{{check2}}</checkbox>
+          </view>
+          <view>
+            <checkbox value='wash'>{{check3}}</checkbox>
+          </view>
+          <view>
+            <checkbox value='money'>{{check4}}</checkbox>
+          </view>
+          <view>
+            <checkbox value='fire'>{{check5}}</checkbox>
+          </view>
+          <view>
+            <checkbox value='boss'>{{check6}}</checkbox>
+          </view>
+        </checkbox-group>
+      </view>
+
+      <view class='phone-message'>
+        <view class='left'>
+          <input type="number" name="telephone" placeholder="请输入手机号" placeholder-class="{{placeholder}}" maxlength='11' />
+        </view>
+        <view class='right'>
+          <button type="button" class="{{isShow?'show':'hide'}}" bindtap='clickVerify'>{{getcode}}</button>
+          <button type="button" class="{{isShow?'hide':'show'}}">{{again}}{{last_time}}{{s}}</button>
+        </view>
+      </view>
+
+      <input type="number" name="code" placeholder="请输入验证码" placeholder-class="{{placeholder}}" maxlength='6' />
+
+      <button class="btn" formType="submit">{{tijiao}}</button>
+      <button class="btn" formType="reset">{{reset}}</button>
+      <text style="font-size:30rpx;  padding-left:35rpx;">{{unimportant}}</text>
+    </form>
+
+    <view>{{username}}</view>
+    <view>{{pass}}</view>
+    <view>{{name}}</view>
+    <view>{{sex}}</view>
+    <view>{{job}}</view>
+    <view>{{telephone}}</view>
+    <view>{{code}}</view>
+  </view>
+</view>

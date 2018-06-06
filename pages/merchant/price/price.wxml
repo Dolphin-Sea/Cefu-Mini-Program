@@ -1,0 +1,3 @@
+<view wx:for='{{price}}' wx:key='unique'>
+<text>{{caiwu.data.price[index].name}}\n{{caiwu.data.price[index].price}}\n{{caiwu.data.price[index].remark}}\n</text>
+</view>

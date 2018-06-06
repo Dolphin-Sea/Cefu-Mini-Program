@@ -1,0 +1,200 @@
+.selection {
+  border-bottom: 5px solid gray;
+}
+
+.header {
+  border-left-width: 2;
+  border-left-style: solid;
+  border-left-color: limegreen;
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.text-all {
+  font-size: 10px;
+  color: green;
+  padding-right: 2px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-item {
+  height: 120rpx; /*240*/
+  width: 15%; /*45%*/
+  margin: 5px;
+  /*background-color: goldenrod;*/
+  position: relative;
+}
+
+.content-item image {
+  height: 100%;
+  width: 100%;
+}
+
+.content-item-text {
+  bottom: 0px;
+  position: absolute;
+  color: white;
+  font-size: 10px;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  height: 30rpx; /* 背景渐变高度*/
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+}
+
+.activity {
+  /*这一部分的整体布局，flex，方向行，若每个方块过大可以换行显示，整体居中对齐*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.activity-item {
+  /*每个方块的高、宽、间距margin*/
+  height: 250rpx;
+  width: 45%;
+  background-color: goldenrod;
+  margin: 2px;
+  position: relative;
+}
+
+.activity-item-text {
+  position: absolute;
+  bottom: 0rpx; /*这个bottom指的是，在小方框定位以后，这个底部是以这个小方框定位开始的，此为最重要的部分*//*height:30rpx;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));此处设置背景高度为30rpx,且透明，相当于将文字写在图片上，如果不加这两句话也可以*/
+  font-size: 10px;
+  color: white;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  height: 30rpx;
+  width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+}
+
+.activity-item image {
+  height: 100%;
+  width: 100%;
+}
+
+.list-item {
+  height: 500rpx;
+  width: 100%;
+}
+
+.list-item-images {
+  height: 300rpx;
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  position: relative;
+}
+
+.list-item-images-img {
+  height: 100%;
+  width: 100%;
+}
+
+.avator {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50rpx;
+  right: 50rpx;
+}
+
+.list-item-text {
+  height: 200rpx;
+  width: 96%;
+  margin-top: 10px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.list-item-text-content {
+  font-size: 10px;
+  color: #999;
+  margin-top: 10px;
+}
+
+/*导航栏上方的citychange和search框*/
+
+.search {
+  display: flex;
+  flex-direction: row;
+  background: #414450; /*深灰色*/
+  padding: 10rpx;
+}
+
+.search-address {
+  color: white;
+  margin-right: 20rpx;
+  margin-left: 10rpx;
+}
+
+.search-form {
+  width: 460rpx;
+  height: 50rpx;
+  position: relative;
+  background: white;
+  border-radius: 20rpx;
+  padding-left: 30px;
+  margin-left: 10px;
+}
+
+.search-form icon {
+  position: absolute;
+  top: 3px;
+  left: 8px;
+}
+
+.search-input {
+  font-size: 24rpx;
+  display: inline-block;
+  font-family: "微软雅黑";
+}
+
+/*公告*/
+
+.notice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #002aff;
+  font-size: 24rpx;
+  height: 65rpx;
+  margin-left: 30rpx;
+}
+
+.notice image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.notice .notice-slider {
+  flex: 1;
+  height: 65rpx;
+  line-height: 65rpx;
+  margin: 10rpx;
+}
+
+.picker {
+  font-size: 40rpx;
+}

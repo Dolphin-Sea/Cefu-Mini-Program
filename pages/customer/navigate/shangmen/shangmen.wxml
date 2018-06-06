@@ -1,0 +1,44 @@
+<view class="container">
+
+  <view class="info">
+    <view>{{sheng}}</view>
+    <picker bindchange="bindPickerChange" value="{{provinceId}}" range="{{province}}">
+      <view class="picker">
+        {{province[provinceId]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="info">
+    <view>{{shi}}</view>
+    <picker bindchange="bindPickerCity" value="{{cityId}}" range="{{city[provinceId].cities}}">
+      <view class="picker">
+        {{city[provinceId].cities[cityId]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="info">
+    <view>{{qu}}</view>
+    <picker bindchange="bindPickerArea" value="{{areaId}}" range="{{area[provinceId][cityId].areaes}}">
+      <view class="picker">
+        {{area[provinceId][cityId].areaes[areaId]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="address">
+    你选择的地址是：{{province[provinceId]}}省{{city[provinceId].cities[cityId]}}市{{area[provinceId][cityId].areaes[areaId]}}县/区
+  </view>
+</view>
+
+  <view>
+    <input class="data-input" bindinput="bindKeyInput" placeholder="请输入详细地址" />
+
+  </view>
+
+
+
+<view class='detail-address'>
+  详细地址如下：{{inputValue}}
+</view>

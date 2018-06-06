@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="title-top">
+    <view class="money">{{commonData.chongzhi.chongzhi_showMoney}}
+     <view class='current-money'>{{currentMoney}}</view>
+    </view>
+    <view class="change-money">
+      <button class="chioce" wx:for="{{moneyArr}}" wx:key="unique" bindtap="chioceAct" data-currentid="{{item.id}}" style="color: {{item.color}}; background-color: {{item.background}}; top: {{item.top}}; left: {{item.left}}">{{item.content}}</button>
+    </view>
+  </view>
+
+  <button class="deposit" disabled='{{judge}}' bindtap="gotoRecharged">{{commonData.chongzhi.chongzhi_chongzhi}}</button>
+  <view class="text1">
+    <view class="box">
+      <switch type='checkbox' bindchange='change'></switch>
+    </view>
+    <view style="margin-left: auto; text-align: right;">{{commonData.chongzhi.chongzhi_read}}</view>
+    <view bindtap="chargeAgree" style="margin-right: auto; text-align: left;color: #EB8A8B">{{commonData.chongzhi.chongzhi_xieyi}}</view>
+  </view>
+</view>

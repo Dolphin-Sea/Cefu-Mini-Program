@@ -1,0 +1,15 @@
+<view class="content">
+   <view class="today">
+      <view class="info">
+            <view class="temp">{{weather.data.temp}}</view>
+            <view class="low-high">{{weather.data.low}}/{{weather.data.high}}</view>
+            <view class="weather-type">{{weather.data.weatherType}}</view>
+            <view class="city">{{weather.data.city}}</view>
+            <view class="week">{{weather.data.week}}</view>
+            <view class="wind"> {{weather.data.wind}} </view>
+            <view class="xiche"> {{weather.data.fit}} </view>
+            <view class="xiche"> {{weather.data.xiche}} </view>
+            <view class="update"> {{weather.data.update}} </view>
+      </view>
+   </view>
+</view>

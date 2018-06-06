@@ -1,0 +1,48 @@
+<view class="content">
+  <view class="account">
+    <view class="title">账号</view>
+    <view class="num">
+      <input bindinput="accountInput" placeholder="用户名/邮箱/手机号" />
+    </view>
+    <!--placeholder默认样式如下方-->
+  </view>
+  <view class="line"></view>
+  <view class="account">
+    <view class="title">密码</view>
+    <view class="num">
+      <input bindblur="pwdBlur" placeholder="请输入密码" password placeholder-style="color:#999999;" />
+    </view>
+    <view class="see">
+      <image src="/icons/see.jpg" style="width:42px;height:30px;"></image>
+    </view>
+  </view>
+  <view class="line"></view>
+  <button class="btn" disabled="{{disabled}}" type="{{btnstate}}" bindtap="login">登录</button>
+  <view class="operate">
+    <view>
+      <navigator url="../../customer/mobile/mobile">手机快速注册</navigator>
+    </view>
+    <!--customer-login文件夹，pages文件夹，customer文件夹-->
+    <view style='color:blue'>找回密码</view>
+  </view>
+  <view class="login">
+    <view class='view1'>
+      <image src="/icons/11.png" style="width:60px;height:60px;"></image>
+      <view>
+        <text>QQ登录</text>
+      </view>
+    </view>
+    <view class='view1'>
+      <image src="/icons/12.png" style="width:60px;height:60px;"></image>
+      <view>
+        <text>微博登录</text>
+      </view>
+    </view>
+    <view class='view1'>
+      <image src="/icons/13.png" style="width:60px;height:60px;"></image>
+      <view>
+        <text>微信登录</text>
+      </view>
+    </view>
+  </view>
+</view>
